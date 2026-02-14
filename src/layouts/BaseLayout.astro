@@ -1,0 +1,31 @@
+---
+const { title = "JTCodeForge" } = Astro.props;
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a href="/" class="logo">JTCodeForge</a>
+        <ul class="nav-links">
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 JTCodeForge — Built with Astro</p>
+    </footer>
+  </body>
+</html>

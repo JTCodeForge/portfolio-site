@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/projects.css";
+---
+
+<BaseLayout title="Projects | JTCodeForge">
+  <div class="projects-container">
+    <h1 class="page-title">Professional Projects</h1>
+
+    <section class="project-list">
+
+      <a href="/projects/game-hosting" class="project-card">
+        <h2>Game Hosting Platform</h2>
+        <p>
+          A production-ready hosting environment for Terraria, Minecraft, and more —
+          built with automation, clean configs, and predictable performance.
+        </p>
+      </a>
+
+      <a href="/projects/monitoring-stack" class="project-card">
+        <h2>Prometheus & Grafana Monitoring Stack</h2>
+        <p>
+          A complete observability setup with exporters, dashboards, alerts, and
+          automated metrics collection for game servers and infrastructure.
+        </p>
+      </a>
+
+      <a href="/projects/automation-toolkit" class="project-card">
+        <h2>Automation Toolkit</h2>
+        <p>
+          A collection of scripts and workflows designed to streamline deployments,
+          updates, maintenance, and operational hygiene.
+        </p>
+      </a>
+
+    </section>
+  </div>
+</BaseLayout>
