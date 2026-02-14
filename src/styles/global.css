@@ -1,0 +1,176 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --bg-panel: #1a1a1a;
+  --border: #2a2a2a;
+  --text-light: #e5e5e5;
+  --text-muted: #cccccc;
+  --accent: #ff7a18;
+  --accent-soft: #ffb347;
+}
+
+/* Base layout */
+body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f0f;
+  color: #e5e5e5;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navigation */
+.site-header {
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ff7a18;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #e5e5e5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ff7a18;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+  overflow: hidden;
+}
+
+/* Ember glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255,122,24,0.25) 0%, rgba(0,0,0,0) 70%);
+  transform: translateX(-50%);
+  animation: emberPulse 6s ease-in-out infinite;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+/* Ember particles container */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255,122,24,0.4) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,122,24,0.25) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,122,24,0.3) 1px, transparent 1px);
+  background-size: 4px 4px, 3px 3px, 2px 2px;
+  animation: emberDrift 12s linear infinite;
+  opacity: 0.25;
+}
+
+@keyframes emberDrift {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-40px); }
+}
+
+@keyframes emberPulse {
+  0% { opacity: 0.25; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.45; transform: translateX(-50%) scale(1.15); }
+  100% { opacity: 0.25; transform: translateX(-50%) scale(1); }
+}
+
+.hero-content {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+}
+
+.hero-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff7a18, #ffb347);
+  transform: translateX(-50%);
+  animation: lineGlow 3s ease-in-out infinite;
+  border-radius: 2px;
+}
+
+@keyframes lineGlow {
+  0% { opacity: 0.6; box-shadow: 0 0 6px #ff7a18; }
+  50% { opacity: 1; box-shadow: 0 0 14px #ffb347; }
+  100% { opacity: 0.6; box-shadow: 0 0 6px #ff7a18; }
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* Call to action */
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ff7a18;
+  color: #0f0f0f;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background: #ff8f3a;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 4rem;
+}

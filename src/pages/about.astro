@@ -1,45 +1,49 @@
 ---
-import "../styles/about.css"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/about.css";
+import "../styles/global.css"
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>About Me | JTCodeForge</title>
+
+    <BaseLayout title="About Me | JTCodeForge">
+        <div class="about-container">
+            <h1 class="title">About Me</h1>
+            <p class="hero-content">
+                I'm James — a systems architect, DevOps engineer, and lifelong tinkerer.
+                I build secure, predictable environments and love turning complex problems
+                into clean, automated solutions. Whether I'm designing infrastructure,
+                optimizing workflows, or experimenting with new ideas, I approach every
+                project with curiosity and pride.
+            </p>
+
+            <p class="hero-content">
+                My background spans infrastructure modernization, automation, security,
+                and cross-team enablement. I’ve led initiatives that stabilized systems,
+                improved developer experience, and strengthened operational hygiene.
+                I’m at my best when I’m building something that blends reliability with
+                creativity.
+            </p>
+
+            <p class="hero-content">
+                Outside of the professional work, I love experimenting — building small
+                tools, interactive demos, and playful projects that teach real concepts
+                in fun ways. That’s why I created the “For Fun” section of this site:
+                a place to explore ideas, test new technologies, and share the joy of
+                building things just because they’re interesting.
+            </p>
+
+            <p class="hero-content">
+                JTCodeForge is my workshop — a place where professional engineering and
+                creative experimentation meet. Thanks for stopping by.
+            </p>
+        </div>
+    </BaseLayout>
+
   </head>
 
-  <body>
-    <main class="about-container">
-      <h1>About Me</h1>
-
-      <p>
-        I'm James — a systems architect, DevOps engineer, and lifelong tinkerer.
-        I build secure, predictable environments and love turning complex problems
-        into clean, automated solutions. Whether I'm designing infrastructure,
-        optimizing workflows, or experimenting with new ideas, I approach every
-        project with curiosity and pride.
-      </p>
-
-      <p>
-        My background spans infrastructure modernization, automation, security,
-        and cross-team enablement. I’ve led initiatives that stabilized systems,
-        improved developer experience, and strengthened operational hygiene.
-        I’m at my best when I’m building something that blends reliability with
-        creativity.
-      </p>
-
-      <p>
-        Outside of the professional work, I love experimenting — building small
-        tools, interactive demos, and playful projects that teach real concepts
-        in fun ways. That’s why I created the “For Fun” section of this site:
-        a place to explore ideas, test new technologies, and share the joy of
-        building things just because they’re interesting.
-      </p>
-
-      <p>
-        JTCodeForge is my workshop — a place where professional engineering and
-        creative experimentation meet. Thanks for stopping by.
-      </p>
-    </main>
-  </body>
+  
 </html>
